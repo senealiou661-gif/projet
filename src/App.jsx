@@ -4,7 +4,7 @@ import { useState, useContext, createContext, useEffect } from "react";
 
 const HOTELS = [
   {
-    id: 1, name: "Le Grand Palais", city: "Paris", country: "France",
+    id: 1, name: "RADISON", city: "DAKAR", country: "DAKAR",
     stars: 5, rating: 4.9, reviews: 342,
     price: 420, oldPrice: 580,
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
@@ -13,7 +13,7 @@ const HOTELS = [
       "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80",
       "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80",
     ],
-    description: "Au cœur de Paris, Le Grand Palais vous accueille dans un cadre d'exception alliant luxe intemporel et modernité. Vue imprenable sur la Tour Eiffel depuis les suites supérieures.",
+    description: "Au cœur de DAKAR, Le Grand Palais vous accueille dans un cadre d'exception alliant luxe intemporel et modernité. Vue imprenable sur la Tour Eiffel depuis les suites supérieures.",
     amenities: ["WiFi", "Piscine", "Spa", "Restaurant", "Bar", "Parking", "Salle sport", "Concierge"],
     rooms: [
       { id: 1, name: "Chambre Classique", price: 420, capacity: 2, size: 28, beds: "1 lit King" },
@@ -24,7 +24,7 @@ const HOTELS = [
     category: "Luxe", available: true,
   },
   {
-    id: 2, name: "Riviera Bleu", city: "Nice", country: "France",
+    id: 2, name: "Riviera Bleu", city: "SAINT LOUI", country: "SENEGAL",
     stars: 4, rating: 4.7, reviews: 218,
     price: 195, oldPrice: 260,
     image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80",
@@ -43,7 +43,7 @@ const HOTELS = [
     category: "Balnéaire", available: true,
   },
   {
-    id: 3, name: "Chalet Alpin", city: "Chamonix", country: "France",
+    id: 3, name: "Chalet Alpin", city: "THIES", country: "SENEGAL",
     stars: 4, rating: 4.8, reviews: 156,
     price: 280, oldPrice: 340,
     image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
@@ -62,7 +62,7 @@ const HOTELS = [
     category: "Montagne", available: true,
   },
   {
-    id: 4, name: "Hôtel des Arts", city: "Lyon", country: "France",
+    id: 4, name: "Hôtel des Arts", city: "DAKAR", country: "SENEGAL",
     stars: 4, rating: 4.6, reviews: 289,
     price: 145, oldPrice: 185,
     image: "https://images.unsplash.com/photo-1596436889106-be35e843f974?w=800&q=80",
@@ -71,7 +71,7 @@ const HOTELS = [
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
       "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
     ],
-    description: "Boutique-hôtel au cœur du Vieux Lyon, l'Hôtel des Arts célèbre la gastronomie et la culture lyonnaise. Chaque chambre est une œuvre d'art unique signée par des artistes locaux.",
+    description: "Boutique-hôtel au cœur du Vieux DAKAR, l'Hôtel des Arts célèbre la gastronomie et la culture lyonnaise. Chaque chambre est une œuvre d'art unique signée par des artistes locaux.",
     amenities: ["WiFi", "Restaurant gastronomique", "Bar", "Terrasse", "Vélos"],
     rooms: [
       { id: 1, name: "Studio Artiste", price: 145, capacity: 2, size: 22, beds: "1 lit Queen" },
@@ -81,7 +81,7 @@ const HOTELS = [
     category: "Boutique", available: true,
   },
   {
-    id: 5, name: "Domaine de Provence", city: "Aix-en-Provence", country: "France",
+    id: 5, name: "POULMAN", city: "DAKAR", country: "SENEGAL",
     stars: 5, rating: 4.9, reviews: 124,
     price: 380, oldPrice: 480,
     image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
@@ -100,7 +100,7 @@ const HOTELS = [
     category: "Campagne", available: true,
   },
   {
-    id: 6, name: "Le Méridien Bordeaux", city: "Bordeaux", country: "France",
+    id: 6, name: "Le NEPAL", city: "KAOLACK", country: "SENEGAL",
     stars: 4, rating: 4.5, reviews: 301,
     price: 160, oldPrice: 200,
     image: "https://images.unsplash.com/photo-1609957372198-27cdca25d01e?w=800&q=80",
@@ -596,7 +596,7 @@ function Nav({ page, setPage }) {
   const { user, logout } = useAuth();
   return (
     <nav className="nav">
-      <div className="nav-brand" onClick={() => setPage("home")}>HôtelLux</div>
+      <div className="nav-brand" onClick={() => setPage("home")}>Hôtel ALMAMA</div>
       <div className="nav-links">
         <button className="nav-btn nav-btn-ghost" onClick={() => setPage("search")}>Hôtels</button>
         {user ? (
@@ -638,12 +638,12 @@ function Home({ setPage, setSelectedHotel }) {
           <h1 className="hero-title fade1">
             Des séjours<br /><span>d'exception</span> vous attendent
           </h1>
-          <p className="hero-sub fade2">Découvrez nos hôtels de luxe sélectionnés avec soin, pour des expériences inoubliables à travers la France.</p>
+          <p className="hero-sub fade2">Découvrez nos hôtels de luxe sélectionnés avec soin, pour des expériences inoubliables à travers le senegal.</p>
 
           <div className="search-form fade3">
             <div className="search-field">
               <label>Destination</label>
-              <input placeholder="Paris, Nice, Lyon…" value={form.city} onChange={e => setForm({ ...form, city: e.target.value })} />
+              <input placeholder="Dakar, Thies, Sain Loui…" value={form.city} onChange={e => setForm({ ...form, city: e.target.value })} />
             </div>
             <div className="search-divider" />
             <div className="search-field">
@@ -704,7 +704,7 @@ function Home({ setPage, setSelectedHotel }) {
       </div>
 
       <footer className="footer">
-        © 2024 <span>HôtelLux</span> — Tous droits réservés
+        © 2024 <span>Hôtel ALMAMA</span> — Tous droits réservés
       </footer>
     </div>
   );
@@ -823,7 +823,7 @@ function Search({ setPage, setSelectedHotel }) {
           : <div className="empty-state"><div className="empty-icon">🔍</div><div className="empty-title">Aucun résultat</div><div className="empty-sub">Essayez une autre destination ou d'autres filtres.</div></div>
         }
       </div>
-      <footer className="footer">© 2024 <span>HôtelLux</span></footer>
+      <footer className="footer">© 2024 <span>Hôtel ALMAMA</span></footer>
     </div>
   );
 }
@@ -943,7 +943,7 @@ function HotelDetail({ hotel, setPage, setToast }) {
           </div>
         </div>
       </div>
-      <footer className="footer">© 2024 <span>HôtelLux</span></footer>
+      <footer className="footer">© 2024 <span>Hôtel ALMAMA</span></footer>
     </div>
   );
 }
@@ -1063,7 +1063,7 @@ function Booking({ setPage, setToast }) {
           </div>
         </div>
       </div>
-      <footer className="footer">© 2024 <span>HôtelLux</span></footer>
+      <footer className="footer">© 2024 <span>Hôtel ALMAMA</span></footer>
     </div>
   );
 }

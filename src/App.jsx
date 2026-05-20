@@ -6,7 +6,7 @@ const HOTELS = [
   {
     id: 1, name: "RADISON", city: "DAKAR", country: "Senegal",
     stars: 5, rating: 4.9,reviews: 342,
-    price:185000CFA , oldPrice: 580,
+    price:420, oldPrice: 580,
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
     images: [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
